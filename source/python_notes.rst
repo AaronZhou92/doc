@@ -54,5 +54,5 @@ Python
 1. Push local changes to repo
 ::
     git add .
-    git commit -, 'some'
+    git commit -m 'some'
     git push
