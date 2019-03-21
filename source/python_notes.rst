@@ -48,12 +48,11 @@ Python
 1.5 Jupyter notebook
 ---------------------
 
-下面是我们的测试代码：
- 
+1.6 Git
+--------------------
+
+1. Push local changes to repo
 ::
- 
-    for i in [1,2,3,4,5]:
-        print i
-    # 代码块测试
- 
-很简单的代码块测试。
+    git add .
+    git commit -, 'some'
+    git push
