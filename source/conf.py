@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'y'
+project = 'Notes'
 copyright = '2019, macro_photon'
 author = 'macro_photon'
 

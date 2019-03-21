@@ -56,3 +56,12 @@ Python
     git add .
     git commit -m 'some'
     git push
+
+
+1.7 ReadtheDocs
+---------------------
+
+1. Solution to 'This page does not exist yet'
+::
+
+    The name of 'master_doc' inside config.py should be index instead of other names
