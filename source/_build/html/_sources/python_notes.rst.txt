@@ -1,0 +1,24 @@
+Python 
+======================
+
+1.1 Pandas
+---------------------
+
+1. Select the same values between df1 and df2, for the nonidentical values, return NaN. df1 and df2 must be same shape
+::
+ 
+    df1.where(df1.values==df2.values)
+
+
+1.2 Jupyter notebook
+---------------------
+
+下面是我们的测试代码：
+ 
+::
+ 
+    for i in [1,2,3,4,5]:
+        print i
+    # 代码块测试
+ 
+很简单的代码块测试。
