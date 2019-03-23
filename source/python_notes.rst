@@ -16,8 +16,21 @@ Python
 
 3. Convert column of str to datetime type
 ::
+
     pd.to_datetime(date_str_columns, format='%Y%m%d%h%M%s')
-%m and %M is different
+%m and %M is different.
+
+4. Convert column names values to first row 
+::
+
+    # convert columns names to a new DataFrame
+    df_column_names = pd.DataFrame({ii: ii for ii in df_2018.columns.values}, [0]) 
+    pd.concat([df_column_names, df_2018], axis=0)
+
+5. Add a fixed hours to datetime index
+::
+
+    df.index + pd.Timedelta(hours=8)
 
 
 1.2 Glob
@@ -25,6 +38,7 @@ Python
 
 1. Select files with file name sharing same starting letters from given directory
 ::
+
     import glob
     selected_file_list = glob.glob(file_path+'\\'+shared_name+'*')
 
@@ -34,6 +48,7 @@ Python
 
 1. list name of files in a given directory
 ::
+
     from os import listdir 
     listdir(directory_path)
 
@@ -42,6 +57,7 @@ Python
 
 1. Double backward slash in file path 
 ::
+
     "C:\\Users\\ZHOU XIN\\"
  
 
@@ -51,8 +67,14 @@ Python
 1.6 Git
 --------------------
 
-1. Push local changes to repo
+1. Pull repo from git
 ::
+
+    git clone git@github.com:AaronZhou92/doc
+
+2. Push local changes to repo
+::
+
     git add .
     git commit -m 'some'
     git push
@@ -65,3 +87,45 @@ Python
 ::
 
     The name of 'master_doc' inside config.py should be index instead of other names
+
+1.8 Errors
+---------------------
+
+1. ValueError: If using all scalar values, you must pass an index
+::
+
+    df = pd.DataFrame({'A': [a], 'B': [b]})
+    df = 
+    A  B
+    0  2  3
+
+or use scalar values and pass an index:
+::
+
+    df = pd.DataFrame({'A': a, 'B': b}, index=[0])
+    df
+    A  B
+    0  2  3
+    
+1.9 Plot
+-------------------
+
+1. Figure with two y axis
+::
+
+    df.USDCNH.plot()
+    ax = df.SH_index.plot(secondary_y=True)
+    ax.set_ylabel('SH_index')
+    plt.legend()
+
+1.10 Parse web data 
+-------------------
+
+1. General method:
+::
+
+    import requests
+    from bs4 import BeautifulSoup
+    url = ''
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'lxml)
