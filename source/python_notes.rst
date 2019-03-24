@@ -32,6 +32,11 @@ Python
 
     df.index + pd.Timedelta(hours=8)
 
+6. Sort rows based on single column
+::
+
+    df.sort_values(by='col')
+
 
 1.2 Glob
 ---------------------
@@ -71,6 +76,8 @@ Python
 ::
 
     git clone git@github.com:AaronZhou92/doc
+    git clone https://github.com/AaronZhou92/doc
+	
 
 2. Push local changes to repo
 ::
@@ -129,3 +136,46 @@ or use scalar values and pass an index:
     url = ''
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'lxml)
+
+1.11 Programming mistakes
+-------------------
+
+1. Date adding 
+::
+
+    "from": date(year, month, day),
+     "to": date(year, month, day+1)
+This is not right because it ignores the month end, 01-31+1, 01-32?
+Should using this 
+::
+
+    date(2019, 1, 31) + timedelta(days=1)
+
+
+2. Every time get a new df, take a look at head and tail to see if it is what you want
+::
+
+    df_2018 df_2019
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
