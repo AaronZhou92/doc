@@ -15,10 +15,11 @@ Python
     pd.read_csv(file_path, encoding=''GBK) # GBK us simplified Chinese encoding.
 
 3. Convert column of str to datetime type
+%m and %M is different.
 ::
 
     pd.to_datetime(date_str_columns, format='%Y%m%d%h%M%s')
-%m and %M is different.
+
 
 4. Convert column names values to first row 
 ::
@@ -94,6 +95,12 @@ Python
 ::
 
     The name of 'master_doc' inside config.py should be index instead of other names
+
+2. Build the project
+::
+
+    Go to folder contains 'make.bat'. 'make html'
+
 
 1.8 Errors
 ---------------------

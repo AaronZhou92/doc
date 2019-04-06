@@ -15,4 +15,5 @@ Welcome
 
    python_notes
    market_notes
+   windows_notes
 
